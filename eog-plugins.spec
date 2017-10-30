@@ -4,7 +4,7 @@
 #
 Name     : eog-plugins
 Version  : 3.26.1
-Release  : 4
+Release  : 5
 URL      : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.1.tar.xz
 Source0  : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.1.tar.xz
 Summary  : No detailed summary available
@@ -59,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1506983253
+export SOURCE_DATE_EPOCH=1509381377
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -71,7 +71,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1506983253
+export SOURCE_DATE_EPOCH=1509381377
 rm -rf %{buildroot}
 %make_install
 %find_lang eog-plugins
@@ -79,21 +79,44 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 /usr/lib64/eog/plugins/exif-display.plugin
+/usr/lib64/eog/plugins/export-to-folder.plugin
+/usr/lib64/eog/plugins/export-to-folder.py
 /usr/lib64/eog/plugins/fit-to-width.plugin
+/usr/lib64/eog/plugins/fullscreenbg.plugin
+/usr/lib64/eog/plugins/fullscreenbg.py
 /usr/lib64/eog/plugins/hide-titlebar.plugin
 /usr/lib64/eog/plugins/light-theme.plugin
+/usr/lib64/eog/plugins/maximize-windows.plugin
+/usr/lib64/eog/plugins/maximize-windows.py
 /usr/lib64/eog/plugins/postasa.plugin
+/usr/lib64/eog/plugins/pythonconsole.plugin
+/usr/lib64/eog/plugins/pythonconsole/__init__.py
+/usr/lib64/eog/plugins/pythonconsole/config.py
+/usr/lib64/eog/plugins/pythonconsole/console.py
 /usr/lib64/eog/plugins/send-by-mail.plugin
+/usr/lib64/eog/plugins/slideshowshuffle.plugin
+/usr/lib64/eog/plugins/slideshowshuffle.py
 
 %files data
 %defattr(-,root,root,-)
 /usr/share/appdata/eog-exif-display.metainfo.xml
+/usr/share/appdata/eog-export-to-folder.metainfo.xml
 /usr/share/appdata/eog-fit-to-width.metainfo.xml
+/usr/share/appdata/eog-fullscreenbg.metainfo.xml
 /usr/share/appdata/eog-hide-titlebar.metainfo.xml
 /usr/share/appdata/eog-light-theme.metainfo.xml
+/usr/share/appdata/eog-maximize-windows.metainfo.xml
 /usr/share/appdata/eog-postasa.metainfo.xml
+/usr/share/appdata/eog-pythonconsole.metainfo.xml
 /usr/share/appdata/eog-send-by-mail.metainfo.xml
+/usr/share/appdata/eog-slideshowshuffle.metainfo.xml
+/usr/share/eog/plugins/export-to-folder/preferences_dialog.ui
+/usr/share/eog/plugins/fullscreenbg/preferences_dialog.ui
+/usr/share/eog/plugins/pythonconsole/config.ui
 /usr/share/glib-2.0/schemas/org.gnome.eog.plugins.exif-display.gschema.xml
+/usr/share/glib-2.0/schemas/org.gnome.eog.plugins.export-to-folder.gschema.xml
+/usr/share/glib-2.0/schemas/org.gnome.eog.plugins.fullscreenbg.gschema.xml
+/usr/share/glib-2.0/schemas/org.gnome.eog.plugins.pythonconsole.gschema.xml
 
 %files lib
 %defattr(-,root,root,-)

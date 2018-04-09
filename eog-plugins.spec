@@ -4,7 +4,7 @@
 #
 Name     : eog-plugins
 Version  : 3.26.2
-Release  : 11
+Release  : 12
 URL      : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.2.tar.xz
 Source0  : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.2.tar.xz
 Summary  : No detailed summary available
@@ -59,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1518488338
+export SOURCE_DATE_EPOCH=1523307297
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -71,13 +71,17 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1518488338
+export SOURCE_DATE_EPOCH=1523307297
 rm -rf %{buildroot}
 %make_install
 %find_lang eog-plugins
 
 %files
 %defattr(-,root,root,-)
+/usr/lib64/eog/plugins/__pycache__/export-to-folder.cpython-36.pyc
+/usr/lib64/eog/plugins/__pycache__/fullscreenbg.cpython-36.pyc
+/usr/lib64/eog/plugins/__pycache__/maximize-windows.cpython-36.pyc
+/usr/lib64/eog/plugins/__pycache__/slideshowshuffle.cpython-36.pyc
 /usr/lib64/eog/plugins/exif-display.plugin
 /usr/lib64/eog/plugins/export-to-folder.plugin
 /usr/lib64/eog/plugins/export-to-folder.py
@@ -91,6 +95,9 @@ rm -rf %{buildroot}
 /usr/lib64/eog/plugins/postasa.plugin
 /usr/lib64/eog/plugins/pythonconsole.plugin
 /usr/lib64/eog/plugins/pythonconsole/__init__.py
+/usr/lib64/eog/plugins/pythonconsole/__pycache__/__init__.cpython-36.pyc
+/usr/lib64/eog/plugins/pythonconsole/__pycache__/config.cpython-36.pyc
+/usr/lib64/eog/plugins/pythonconsole/__pycache__/console.cpython-36.pyc
 /usr/lib64/eog/plugins/pythonconsole/config.py
 /usr/lib64/eog/plugins/pythonconsole/console.py
 /usr/lib64/eog/plugins/send-by-mail.plugin

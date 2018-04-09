@@ -1,5 +1,6 @@
 libc.so.6
 libcairo.so.2
+libeog.so
 libexif.so.12
 libgdata.so.22
 libgdk_pixbuf-2.0.so.0

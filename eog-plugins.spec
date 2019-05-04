@@ -4,16 +4,16 @@
 #
 Name     : eog-plugins
 Version  : 3.26.3
-Release  : 15
+Release  : 16
 URL      : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.3.tar.xz
 Source0  : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.3.tar.xz
-Summary  : No detailed summary available
+Summary  : Plugins for Eye of Gnome
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: eog-plugins-lib
-Requires: eog-plugins-data
-Requires: eog-plugins-license
-Requires: eog-plugins-locales
+Requires: eog-plugins-data = %{version}-%{release}
+Requires: eog-plugins-lib = %{version}-%{release}
+Requires: eog-plugins-license = %{version}-%{release}
+Requires: eog-plugins-locales = %{version}-%{release}
 BuildRequires : buildreq-gnome
 BuildRequires : gettext
 BuildRequires : perl(XML::Parser)
@@ -39,8 +39,8 @@ data components for the eog-plugins package.
 %package lib
 Summary: lib components for the eog-plugins package.
 Group: Libraries
-Requires: eog-plugins-data
-Requires: eog-plugins-license
+Requires: eog-plugins-data = %{version}-%{release}
+Requires: eog-plugins-license = %{version}-%{release}
 
 %description lib
 lib components for the eog-plugins package.
@@ -70,7 +70,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532403675
+export SOURCE_DATE_EPOCH=1556996237
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -82,10 +89,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1532403675
+export SOURCE_DATE_EPOCH=1556996237
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/eog-plugins
-cp COPYING %{buildroot}/usr/share/doc/eog-plugins/COPYING
+mkdir -p %{buildroot}/usr/share/package-licenses/eog-plugins
+cp COPYING %{buildroot}/usr/share/package-licenses/eog-plugins/COPYING
 %make_install
 %find_lang eog-plugins
 
@@ -141,8 +148,8 @@ cp COPYING %{buildroot}/usr/share/doc/eog-plugins/COPYING
 /usr/lib64/eog/plugins/libsend-by-mail.so
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/eog-plugins/COPYING
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/eog-plugins/COPYING
 
 %files locales -f eog-plugins.lang
 %defattr(-,root,root,-)

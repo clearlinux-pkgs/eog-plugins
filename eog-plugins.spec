@@ -4,10 +4,10 @@
 #
 Name     : eog-plugins
 Version  : 3.26.5
-Release  : 18
+Release  : 19
 URL      : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.5.tar.xz
 Source0  : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.5.tar.xz
-Summary  : Plugins for Eye of Gnome
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: eog-plugins-data = %{version}-%{release}
@@ -71,15 +71,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578331415
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1586224331
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -92,7 +91,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1578331415
+export SOURCE_DATE_EPOCH=1586224331
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/eog-plugins
 cp %{_builddir}/eog-plugins-3.26.5/COPYING %{buildroot}/usr/share/package-licenses/eog-plugins/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1

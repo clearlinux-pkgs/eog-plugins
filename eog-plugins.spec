@@ -4,7 +4,7 @@
 #
 Name     : eog-plugins
 Version  : 3.26.5
-Release  : 19
+Release  : 20
 URL      : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.5.tar.xz
 Source0  : https://download.gnome.org/sources/eog-plugins/3.26/eog-plugins-3.26.5.tar.xz
 Summary  : No detailed summary available

@@ -1,5 +1,9 @@
 libc.so.6
 libcairo.so.2
+libchamplain-0.12.so.0
+libchamplain-gtk-0.12.so.0
+libclutter-1.0.so.0
+libclutter-gtk-1.0.so.0
 libeog.so
 libexif.so.12
 libgdata.so.22
@@ -9,3 +13,4 @@ libglib-2.0.so.0
 libgobject-2.0.so.0
 libgtk-3.so.0
 libpeas-1.0.so.0
+libpeas-gtk-1.0.so.0

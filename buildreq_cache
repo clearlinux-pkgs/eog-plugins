@@ -1,0 +1,5 @@
+42.0
+appstream-glib
+libchamplain-dev
+pkgconfig(libexif)
+pkgconfig(libgdata)

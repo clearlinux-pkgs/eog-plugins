@@ -4,7 +4,7 @@
 #
 Name     : eog-plugins
 Version  : 42.2
-Release  : 26
+Release  : 27
 URL      : https://download.gnome.org/sources/eog-plugins/42/eog-plugins-42.2.tar.xz
 Source0  : https://download.gnome.org/sources/eog-plugins/42/eog-plugins-42.2.tar.xz
 Summary  : No detailed summary available

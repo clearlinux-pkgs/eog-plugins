@@ -1,3 +1,27 @@
+Version 44.0
+------------
+
+New and updated translations:
+
+- Yuras Shumovich [be]
+- Alexandre Franke [fr]
+- Ekaterine Papava [ka]
+- Seong-ho Cho [ko]
+- Aurimas Černius [lt]
+- Matej Urbančič [sl]
+
+Version 42.3
+------------
+
+General changes:
+
+- !9, build: Use correct variables (Matt Turner)
+
+New and updated translations:
+
+- Yuras Shumovich [be]
+- Ekaterine Papava [ka]
+
 Version 42.2
 ------------
 
